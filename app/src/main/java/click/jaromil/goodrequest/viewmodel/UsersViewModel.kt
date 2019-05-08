@@ -49,9 +49,9 @@ class UsersViewModel(private val apiRepository: Repository) : ViewModel() {
     
     
     /**
-     * get all contributors of repo
+     * get user details with user posts
      *
-     * @param fullName full name of repository
+     * @param userId id of user
      */
     fun getUserDetails(userId: Int) {
         isLoading.set(true)
