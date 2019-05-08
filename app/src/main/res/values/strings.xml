@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GRUsers</string>
+    <string name="users_title">GR Users</string>
+    <string name="user_full_name">full name</string>
+    <string name="username">username</string>
+    <string name="email">email</string>
+    <string name="retry">retry</string>
+    <string name="no_data">ups no data!</string>
+    <string name="check_internet_connection">Pls. check your internet connection!</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="obj" type="click.jaromil.goodrequest.model.User" />
+        <variable name="adapter" type="click.jaromil.goodrequest.view.adapter.UsersAdapter" />
+    </data>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:onClick="@{() -> adapter.onItemClick(obj)}">
+
+        <include layout="@layout/guidelines"/>
+
+        <TextView
+                android:id="@+id/name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_center_horizontal"
+                android:textStyle="bold"
+                android:text="@{obj.name}"/>
+
+        <TextView
+                android:id="@+id/email_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toTopOf="@id/guideline_center_horizontal"
+                android:text="@{obj.email}"/>
+
+        <View
+                android:layout_width="8dp"
+                android:layout_height="0dp"
+                android:background="@color/primary_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline_top"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
